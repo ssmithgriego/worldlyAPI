@@ -23,7 +23,7 @@ export class CountryArticleService {
       })
       .then(data => {
         let wikiMediaApiResp: wikiMediaApiResp = data;
-        const article = wikiMediaApiResp.query.pages[18951905].extract;
+        const article = Object.entries(wikiMediaApiResp.query.pages)[0][1].extract;
         return article;
       })
       .catch(error => {

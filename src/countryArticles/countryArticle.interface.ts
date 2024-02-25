@@ -20,3 +20,5 @@ export interface wikiMediaApiResp {
     extracts: number
   }
 }
+
+
