@@ -10,14 +10,14 @@ import {
   UseFilters,
 } from '@nestjs/common';
 import { CountryArticleService } from './countryArticle.service';
-import { wikiMediaApiResp } from './countryArticle.interface';
 
-@Controller('countries')
+@Controller('countryArticle')
 export class CountryArticleController {
   constructor(private readonly countryArticleService: CountryArticleService) { }
 
   @Get(':name')
-  public async findOne(@Param('name') name: string) {
+  public async getCountryArticle(@Param('name') name: string) {
+    console.log('here?');
     return this.countryArticleService.getCountryArticle(name);
   }
 

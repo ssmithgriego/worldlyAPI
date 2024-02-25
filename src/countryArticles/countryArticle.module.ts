@@ -3,9 +3,9 @@ import { CountryArticleService } from './countryArticle.service';
 import { CountryArticleController } from './countryArticle.controller';
 
 @Module({
-  providers: [CountryArticleController],
+  providers: [CountryArticleService],
   controllers: [CountryArticleController],
   exports: [CountryArticleService],
 })
 
-export class CountriesModule { }
+export class CountryArticleModule { }

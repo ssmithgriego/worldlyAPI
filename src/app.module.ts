@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { CountriesModule } from './countries/countries.module';
+import { CountryArticleModule } from './countryArticles/countryArticle.module';
 
 @Module({
-    imports: [CountriesModule],
-    controllers: [],
-    providers: [],
+  imports: [CountryArticleModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule { }
