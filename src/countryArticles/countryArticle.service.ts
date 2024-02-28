@@ -1,8 +1,7 @@
 import {
   Injectable,
-  Logger,
-  NotFoundException,
-  UnprocessableEntityException,
+  HttpException,
+  HttpStatus,
 } from '@nestjs/common';
 import { wikiMediaApiResp } from './countryArticle.interface';
 
@@ -28,6 +27,7 @@ export class CountryArticleService {
       })
       .catch(error => {
         console.error(error);
+        throw new HttpException('REST Countries API Error', HttpStatus.BAD_REQUEST);
       });
     return countryArticle;
   }

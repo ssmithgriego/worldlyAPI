@@ -1,6 +1,23 @@
-export type CountryDetailApiResp = CountryDetailRespObj[];
+export interface CountryDetail {
+  name: string,
+  population: number,
+  unMember: boolean,
+  capital: [],
+  latlng: number[],
+  languages: Languages,
+  flag: string,
+}
 
-export interface CountryDetailRespObj {
+export interface CountryIdentifier {
+  name: string,
+  dial_code: string,
+  code: string,
+  flag: string,
+}
+
+export type RestCountriesApiResp = RestCountriesApiRespObj[];
+
+export interface RestCountriesApiRespObj {
   name: Name
   tld: string[]
   cca2: string
@@ -267,9 +284,3 @@ export interface PostalCode {
   regex: string
 }
 
-export interface CountryIdentifier {
-  name: string,
-  dial_code: string,
-  code: string,
-  flag: string,
-}
