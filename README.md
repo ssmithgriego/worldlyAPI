@@ -12,7 +12,7 @@ Nest is a framework for building efficient, scalable <a href="https://nodejs.org
 ## Getting started
 
   `
-  npm i
+  npm i &&
   npm run start
   `
 
